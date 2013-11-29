@@ -50,7 +50,7 @@ public class CardStorageController {
             }
 
             // file output stream to write to a file
-            FileOutputStream fos = new FileOutputStream (new File(path));//c.openFileOutput(path, Context.MODE_PRIVATE);
+            FileOutputStream fos = new FileOutputStream (new File(path),false);//c.openFileOutput(path, Context.MODE_PRIVATE);
             // object output stream to serialize an object
             ObjectOutputStream os = new ObjectOutputStream(fos);
             // write the cards to the file
