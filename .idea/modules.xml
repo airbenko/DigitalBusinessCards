@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DigitalBusinessCards/DigitalBusinessCards.iml" filepath="$PROJECT_DIR$/DigitalBusinessCards/DigitalBusinessCards.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DigitalBusinessCards/DigitalBusinessCards-DigitalBusinessCards.iml" filepath="$PROJECT_DIR$/DigitalBusinessCards/DigitalBusinessCards-DigitalBusinessCards.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DigitalBusinessCardsProject.iml" filepath="$PROJECT_DIR$/DigitalBusinessCardsProject.iml" />
+    </modules>
+  </component>
+</project>
+
