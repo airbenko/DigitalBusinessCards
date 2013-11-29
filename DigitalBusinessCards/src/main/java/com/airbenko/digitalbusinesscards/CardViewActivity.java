@@ -4,12 +4,17 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class CardViewActivity extends ActionBarActivity {
 
@@ -23,6 +28,39 @@ public class CardViewActivity extends ActionBarActivity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+
+
+        /*
+        TEST CODE
+         */
+
+        //Make a new Card
+        Card card = new Card();
+        card.firstName = "Josh";
+        card.lastName = "Benko";
+
+        //Add card to group of cards
+        ArrayList<Card> group = new ArrayList<Card>();
+        group.add(card);
+
+        // Get storage controller and write cards to disk
+        CardStorageController csc = CardStorageController.getInstance();
+        csc.writeCards(getApplicationContext(),group);
+
+        //Read cards from disk
+        ArrayList<Card> group2 = csc.readCards(getApplicationContext());
+
+        if (group2 == null) Log.i("hello","world");
+        else {
+            Card card2 = group2.get(0);
+            Toast.makeText(getApplicationContext(), card2.firstName + card2.lastName,Toast.LENGTH_LONG).show();
+        }
+        //Log.i("Cards","" + group2.size());
+
+        //Pop up message
+        //Toast.makeText(getApplicationContext(), card2.firstName + card2.lastName,
+                //Toast.LENGTH_LONG).show();
+
     }
 
 
