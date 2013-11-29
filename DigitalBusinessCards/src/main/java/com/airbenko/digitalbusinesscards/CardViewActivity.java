@@ -11,12 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
-public class StoredCardsActivity extends ActionBarActivity {
+public class CardViewActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_storedcards);
+        setContentView(R.layout.activity_viewcard);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
