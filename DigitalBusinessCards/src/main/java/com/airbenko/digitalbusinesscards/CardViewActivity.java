@@ -1,5 +1,6 @@
 package com.airbenko.digitalbusinesscards;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -55,11 +56,11 @@ public class CardViewActivity extends ActionBarActivity {
             Card card2 = group2.get(0);
             Toast.makeText(getApplicationContext(), card2.firstName + card2.lastName,Toast.LENGTH_LONG).show();
         }
-        //Log.i("Cards","" + group2.size());
 
-        //Pop up message
-        //Toast.makeText(getApplicationContext(), card2.firstName + card2.lastName,
-                //Toast.LENGTH_LONG).show();
+
+        //Open New Screen
+        Intent intent = new Intent(CardViewActivity.this,EditCardController.class);
+        startActivity(intent);
 
     }
 
