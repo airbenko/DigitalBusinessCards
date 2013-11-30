@@ -68,4 +68,14 @@
         android:layout_below="@+id/webText"
         android:layout_toRightOf="@+id/firstText" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/lastText"
+        android:layout_marginBottom="37dp" />
+
 </RelativeLayout>
